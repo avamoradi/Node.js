@@ -19,3 +19,13 @@
 let numbers = [ "12", "846", "2", "1236" ];
 
 // YOUR CODE GOES HERE
+
+let replaceFunction = require('./padLeft.js') ;
+
+numbers.forEach(element => console.log(replaceFunction.padLeft(element, 5, ' ')));
+
+
+
+
+
+

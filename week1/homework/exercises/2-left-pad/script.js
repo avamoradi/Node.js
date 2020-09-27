@@ -11,3 +11,8 @@
 let numbers = [ "12", "846", "2", "1236" ];
 
 // YOUR CODE GOES HERE
+
+//let replaceFunction = require('./padLeft.js') ;
+const leftPad = require('left-pad');
+numbers.forEach(element => console.log(leftPad(element, 8, ' ')));
+
