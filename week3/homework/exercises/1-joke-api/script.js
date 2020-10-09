@@ -10,9 +10,19 @@
  * - Print the entire response to the console to see how it is structured.
  */
 
-function printChuckNorrisJoke() {
-  // YOUR CODE GOES IN HERE
+ const fetch = require('node-fetch');
 
+async function printChuckNorrisJoke() {
+   // YOUR CODE GOES IN HERE
+   try{
+    await fetch('http://api.icndb.com/jokes/random')
+     .then(res => res.json())
+     .then(body => console.log(body.value.joke));
+   }
+   catch{
+     console.log('API Error');
+     return 0;
+   }
 }
 
 printChuckNorrisJoke();
