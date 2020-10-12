@@ -1,0 +1,35 @@
+body{
+  font: 1em sans-serif;
+}
+.container{
+  margin: 0 auto;
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+}
+form{
+  width: 100%;
+  margin: 0.1rem;
+}
+input {
+  border: none;
+  border-bottom: 1px solid black;
+  width: 90%;
+  display: block;
+  margin: 1rem;
+  margin-top: 2rem;
+  padding: 0.5rem;
+  font-size: 1rem; 
+}
+
+button{
+  background-color: #26A69A;
+  color: white;
+  padding: 0.1rem;
+  width: 8%;
+  height: 40px;
+  border: none;
+  border-radius: 3px;
+  margin: 0 auto;
+  font-size: 1rem;
+}
