@@ -38,7 +38,7 @@ const punchlinesword = getRandomElement(punchlines);
  * Given an array, return an element from it chosen at random
  */
 function getRandomElement(array) {
-  let randomNum = Math.floor(Math.random()*7);
+  let randomNum = Math.floor(Math.random()*(array.length));
   return (array[randomNum]);
 }
 
