@@ -9,22 +9,31 @@
  * - for basic authentication the username and password need to be base64 encoded
  */
 
-const fetch = require('node-fetch');
+//  function printBooks() {
+//   // YOUR CODE GOES IN HERE
+//    fetch('https://restapiabasicauthe-sandbox.mxapps.io/api/books',
+//     {
+//       headers: { 'Authorization': 'Basic  YWRtaW46aHZnWDhLbFZFYQ==' }
+//     })
+//   .then(res => res.json())
+//   .then(json => console.log(json))
+//   .catch(err => console.log(err))
+// }
 
- async function printBooks() {
-  // YOUR CODE GOES IN HERE
-  try {
-   await fetch('https://restapiabasicauthe-sandbox.mxapps.io/api/books',
+async function printBooks(){
+  try{
+    const res = await fetch('https://restapiabasicauthe-sandbox.mxapps.io/api/books',
     {
-      headers: { 'Authorization': 'Basic  YWRtaW46aHZnWDhLbFZFYQ==' }
-    })
-  .then(res => res.json())
-  .then(json => console.log(json));
-}
-  catch{
-    console.log('API ERROR')
-    return 0
+     headers: { 'Authorization': 'Basic  YWRtaW46aHZnWDhLbFZFYQ==' }
+    });
+
+    const json = await res.json();
+    console.log(json);
   }
+  catch{}
 }
 
 printBooks();
+
+
+
