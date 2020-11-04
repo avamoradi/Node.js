@@ -11,20 +11,32 @@
 
 const fetch = require('node-fetch');
 
-async function makeReservation() {
-  // YOUR CODE GOES IN HERE
+// function makeReservation() {
+//   // YOUR CODE GOES IN HERE
+//     const body = { "name": "Ava Moradi","numberOfPeople": "2" };
+//     fetch('https://reservation100-sandbox.mxapps.io/api/reservations', {
+//         method: 'post',
+//         body:    JSON.stringify(body),
+//         headers: { 'Content-Type': 'application/json' },
+//     })
+//     .then(res => res.json())
+//     .then(json => console.log(json))
+//     .catch(err => console.log(err));
+// }
+
+async function makeReservation(){
+  const body = { "name": "Ava Moradi","numberOfPeople": "2" };
   try{
-    const body = { "name": "Ava Moradi","numberOfPeople": "2" };
-    await fetch('https://reservation100-sandbox.mxapps.io/api/reservations', {
-        method: 'post',
-        body:    JSON.stringify(body),
-        headers: { 'Content-Type': 'application/json' },
+    const res = await fetch('https://reservation100-sandbox.mxapps.io/api/reservations', {
+     method: 'post',
+     body:    JSON.stringify(body),
+     headers: { 'Content-Type': 'application/json' },
     })
-    .then(res => res.json())
-    .then(json => console.log(json));
+    const json = await res.json();
+    console.log(json)
   }
   catch{
-    console.log('API ERROR');
+    console.log("API ERROR");
     return 0
   }
 }
